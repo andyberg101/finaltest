@@ -16,11 +16,21 @@ public class ADVBankAccountPage extends InternalPage {
     @FindBy(xpath = "//tr[@class='collapsed']")
     public List<WebElement> numberPayment;
 
+    @FindBy(xpath = "//span[text()='Pay & Transfer']")
+    public WebElement payTranferLink;
+
+    @FindBy(xpath = "//h1[text()='Pay & Transfer']")
+    public WebElement payTransferButton;
+
     public String getAvailableBalanceText() {
         return availableBalanceText.getText();
     }
 
     public int getNumberPayment(){
         return  numberPayment.size();
+    }
+    public String toPayTransferPage(){
+        payTranferLink.click();
+        return payTranferLink.getText();
     }
 }

@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import java.util.List;
 
 public class InternalPage extends BasePage{
-    @FindBy(xpath = "//div/div/div[4]/footer/p[2]/text()[1]")
+    @FindBy(xpath = "//footer/p[2]")
     public WebElement footer;
 
     @FindBy(css = "#welcomeNavHeading")
@@ -18,7 +18,7 @@ public class InternalPage extends BasePage{
     @FindBy(css = "ul[class = 'flex-wrap flex-row list-group']")
             public List<WebElement> mainMenu;
 
-    InternalPage(TestContext context) {
+    public InternalPage(TestContext context) {
         super(context);
     }
 
